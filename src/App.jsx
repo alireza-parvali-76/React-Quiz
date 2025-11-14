@@ -1,10 +1,28 @@
-import React from 'react'
-import QuestionBox from './Components/QuestionBox/QuestionBox'
+import React from "react";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./Pages/Home/Home";
+import QuestionBox from "./Pages/QuestionBox/QuestionBox";
+import NotFound from "./Pages/404/404";
 
 export default function App() {
   return (
+    <Router>
       <div className="min-h-screen flex items-center justify-center bg-black">
-        <QuestionBox />
+        <Routes>
+          {/* صفحه اصلی */}
+          <Route path="/" element={<Home />} />
+
+          {/* صفحه کوییز */}
+          <Route path="/quiz" element={<QuestionBox />} />
+
+          {/* صفحه 404 - برای مسیرهای اشتباه */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </div>
-  )
+    </Router>
+  );
 }
+
+
+
+
