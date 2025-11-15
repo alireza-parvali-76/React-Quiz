@@ -36,3 +36,25 @@
   background-color: rgba(255, 255, 255, 0.3);
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
+/* ✅ حالت درست (سبز) */
+.uiverse-btn-correct {
+  background: linear-gradient(to right, #16a34a, #15803d) !important;
+  color: white !important;
+  cursor: default;
+}
+
+/* ❌ حالت اشتباه (قرمز) */
+.uiverse-btn-wrong {
+  background: linear-gradient(to right, #dc2626, #b91c1c) !important;
+  color: white !important;
+  cursor: default;
+}
+
+/* ⚪️ بقیه گزینه‌ها غیرفعال */
+.uiverse-btn-disabled {
+  background: linear-gradient(to right, #4b5563, #374151) !important;
+  color: #d1d5db !important;
+  opacity: 0.7;
+  cursor: not-allowed;
+}

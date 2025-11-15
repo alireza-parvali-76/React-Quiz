@@ -2,6 +2,7 @@ import React from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home/Home";
 import QuestionBox from "./Pages/QuestionBox/QuestionBox";
+import Result from "./Pages/Result/Result";
 import NotFound from "./Pages/404/404";
 
 export default function App() {
@@ -17,12 +18,9 @@ export default function App() {
 
           {/* صفحه 404 - برای مسیرهای اشتباه */}
           <Route path="*" element={<NotFound />} />
+          <Route path="/result" element={<Result />} />
         </Routes>
       </div>
     </Router>
   );
 }
-
-
-
-
