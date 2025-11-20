@@ -1,60 +1,52 @@
 .uiverse-btn {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 0.75em;
   position: relative;
   font-size: 17px;
   text-transform: uppercase;
-  text-decoration: none;
-  padding: 1em 2.5em;
+  padding: 1em 1.8em;
   cursor: pointer;
   border-radius: 6em;
-  transition: transform 0.1s ease, box-shadow 0.2s ease;
   border: none;
-  font-family: inherit;
   font-weight: 500;
   color: white;
   background: linear-gradient(to right, #3b82f6, #2563eb);
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
   overflow: hidden;
 }
 
 .uiverse-btn:active {
   transform: translateY(2px) scale(0.95);
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
 }
 
 .uiverse-btn::after {
   content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 100px;
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  background-color: rgba(255, 255, 255, 0.3);
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  inset: 0;
+  border-radius: inherit;
+  background-color: rgba(255, 255, 255, 0.25);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+.uiverse-btn:hover::after {
+  opacity: 1;
 }
 
-/* ✅ حالت درست (سبز) */
+/* 🟩 درست */
 .uiverse-btn-correct {
   background: linear-gradient(to right, #16a34a, #15803d) !important;
-  color: white !important;
-  cursor: default;
 }
 
-/* ❌ حالت اشتباه (قرمز) */
+/* 🟥 اشتباه */
 .uiverse-btn-wrong {
   background: linear-gradient(to right, #dc2626, #b91c1c) !important;
-  color: white !important;
-  cursor: default;
 }
 
-/* ⚪️ بقیه گزینه‌ها غیرفعال */
+/* ⚪ غیرفعال */
 .uiverse-btn-disabled {
   background: linear-gradient(to right, #4b5563, #374151) !important;
-  color: #d1d5db !important;
-  opacity: 0.7;
   cursor: not-allowed;
+  opacity: 0.75;
 }

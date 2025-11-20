@@ -12,7 +12,7 @@ export default function Modal({ open, onConfirm, onCancel }) {
     <Dialog open={open} onClose={onCancel} className="relative z-10">
       <DialogBackdrop
         transition
-        className="fixed inset-0 bg-black transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"
+        className="fixed inset-0 bg-[#161f30] transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"
       />
 
       <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
@@ -34,11 +34,11 @@ export default function Modal({ open, onConfirm, onCancel }) {
                     as="h3"
                     className="text-base font-semibold text-gray-900"
                   >
-                    Ready to start the quiz?
+                    آماده شروع آزمون هستی؟
                   </DialogTitle>
                   <div className="mt-2">
                     <p className="text-sm text-gray-500">
-                      Are you want to Answer Question?
+                      میخوای به سوالات پاسخ دهی؟
                     </p>
                   </div>
                 </div>
@@ -51,14 +51,14 @@ export default function Modal({ open, onConfirm, onCancel }) {
                 onClick={onConfirm}
                 className="inline-flex w-full justify-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-blue-500 sm:ml-3 sm:w-auto"
               >
-                Yes
+                بله
               </button>
               <button
                 type="button"
                 onClick={onCancel}
                 className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-xs inset-ring inset-ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto"
               >
-                Cancel
+                خیر
               </button>
             </div>
           </DialogPanel>

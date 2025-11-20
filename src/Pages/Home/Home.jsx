@@ -15,7 +15,7 @@
      return (
        <div>
          <button className="button" onClick={() => setModalOpen(true)}>
-           Start Game
+            شروع بازی
          </button>
 
          {modalOpen && (

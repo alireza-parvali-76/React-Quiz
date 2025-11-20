@@ -8,7 +8,7 @@ import NotFound from "./Pages/404/404";
 export default function App() {
   return (
     <Router>
-      <div className="min-h-screen flex items-center justify-center bg-black">
+      <div className="min-h-screen flex items-center justify-center bg-[#161f30]">
         <Routes>
           {/* صفحه اصلی */}
           <Route path="/" element={<Home />} />
